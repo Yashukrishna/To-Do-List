@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar with Add and Preview buttons -->
+        <div class="sidebar">
+            <button id="add-task-menu">Add Task</button>
+            <button id="preview-task-menu">Preview Task</button>
+        </div>
+
+        <!-- Right section for adding tasks or previewing tasks -->
+        <div class="main-content">
+            <!-- Section for adding tasks -->
+            <div id="add-task-section" class="task-section active">
+                <h1 class="main-title">To-Do List</h1>
+
+                <input type="text" id="task-name" placeholder="Enter task" required>
+                <textarea id="task-desc" placeholder="Enter task description (optional)"></textarea>
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option value="personal">Personal</option>
+                    <option value="professional">Professional</option>
+                </select>
+                <label for="reminder-date">Set Reminder Date:</label>
+                <input type="date" id="reminder-date">
+                <label for="reminder-time">Set Reminder Time:</label>
+                <input type="time" id="reminder-time">
+                <button id="add-task-btn">Add Task</button>
+            </div>
+
+            <!-- Section for previewing tasks -->
+            <div id="preview-task-section" class="task-section">
+                <h1>Preview Tasks</h1>
+                <div id="task-sections">
+                    <div class="task-category">
+                        <h2>Personal Tasks</h2>
+                        <ul id="personal-list"></ul>
+                    </div>
+                    <div class="task-category">
+                        <h2>Professional Tasks</h2>
+                        <ul id="professional-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
